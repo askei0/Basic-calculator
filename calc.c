@@ -1,27 +1,19 @@
 #include <stdio.h>
 
 float sum(float first, float second){
-	float result = 0;
-	result = first + second;
-	return result;
+	return first + second;
 }
 
 float sub(float first, float second){
-	float result = 0;
-	result = first - second;
-	return result;
+	return first - second;
 }
 
 float div(float first, float second){
-	float result = 0;
-	result = first / second;
-	return result;
+	return first / second;
 }
 
 float mult(float first, float second){
-	float result = 0;
-	result = first * second;
-	return result;
+	return first * second;
 }
 
 
@@ -41,16 +33,24 @@ int main(){
 
 	if (selection == 1)
 	{
-		printf("%f",sum(first, second));
+		printf("%f\n",sum(first, second));
 	}
-	if (selection == 2){
-		printf("%f",sub(first, second));
+	else if (selection == 2){
+		printf("%f\n",sub(first, second));
 	}
-	if (selection == 3){
-		printf("%f",mult(first, second));
+	else if (selection == 3){
+		printf("%f\n",mult(first, second));
 	}
-	if (selection == 4){
-		printf("%f",div(first, second));
+	else if (selection == 4){
+		if(second == 0){
+			printf("Division by zero\n");
+		}
+		else{
+			printf("%f\n",div(first, second));
+		}
+	}
+	else {
+		printf("Invalid operation\n");
 	}
 }
 
